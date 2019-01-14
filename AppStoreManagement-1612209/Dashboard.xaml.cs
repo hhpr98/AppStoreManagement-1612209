@@ -26,6 +26,7 @@ namespace AppStoreManagement_1612209
             InitializeComponent();
         }
 
+        List<SanPham> dsSanPham = new List<SanPham>();
 
         public List<SanPham> getItems()
         {
@@ -35,10 +36,14 @@ namespace AppStoreManagement_1612209
             return items;
         }
 
+        public int currentPage;
+        public int rowPerPage = 6;
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var items = getItems();
-            itemListView.ItemsSource = items;
+            currentPage = 1;
+            dsSanPham = getItems();
+            itemListView.ItemsSource = dsSanPham.Take(6);
         }
 
         //private void ItemListView_Selected(object sender, MouseButtonEventArgs e)
@@ -60,22 +65,54 @@ namespace AppStoreManagement_1612209
 
         private void ItemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //ListViewItem item = e.OriginalSource as ListViewItem;
-            //if (item==null)
-            //{
-            //    MessageBox.Show("NULL");
-            //}
-            //else
-            //{
-            //    var i = ((SanPham)item.Content).TenSanPham;
-            //    MessageBox.Show(i);
-            //}
+            var item = itemListView.SelectedItem;
+            if (item == null)
+            {
+                return;
+            }
+            else
+            {
+                var windows = new HienThiChiTietSanPham(item as SanPham);
+                windows.ShowDialog();
+            }
         }
 
         private void BtnFind_Click(object sender, RoutedEventArgs e)
         {
             var windows = new TimKiem();
             windows.Show();
+        }
+
+        private void BtnPagePrev_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentPage==1)
+            {
+                //MessageBoxButton button = MessageBoxButton.OK;
+                //MessageBoxImage icon = MessageBoxImage.Information;
+                //string content = "Trang đầu không thể lùi được!";
+                //MessageBox.Show(content, "Thông báo", button, icon);
+            }
+            else
+            {
+                currentPage--;
+                itemListView.ItemsSource = dsSanPham.Skip((currentPage-1)*rowPerPage).Take(6);
+            }
+        }
+
+        private void BtnPageNext_Click(object sender, RoutedEventArgs e)
+        {
+            if ((currentPage*6)>=dsSanPham.Count())
+            {
+                //MessageBoxButton button = MessageBoxButton.OK;
+                //MessageBoxImage icon = MessageBoxImage.Information;
+                //string content = "Trang cuối không thể tới được!";
+                //MessageBox.Show(content, "Thông báo", button, icon);
+            }
+            else
+            {
+                currentPage++;
+                itemListView.ItemsSource = dsSanPham.Skip((currentPage - 1) * rowPerPage).Take(6);
+            }
         }
     }
 }

@@ -38,3 +38,8 @@ C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreM
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\Dashboard.baml
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.csproj.CopyComplete
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\TimKiem.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\Result.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\TimKiem.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\Result.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\HienThiChiTietSanPham.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\HienThiChiTietSanPham.baml

@@ -71,14 +71,14 @@ namespace AppStoreManagement_1612209
             {
                 if (check == "10")
                 {
-                    check = check.Insert(3, "+");
-                    check = check.Insert(4, txtName.Text);
+                    check = check.Insert(2, "+");
+                    check = check.Insert(3, txtName.Text);
                 }
 
                 if (check == "01")
                 {
-                    check = check.Insert(3, "+");
-                    check = check.Insert(4, txtType.Text);
+                    check = check.Insert(2, "+");
+                    check = check.Insert(3, txtType.Text);
                 }
 
                 if (check == "11")
