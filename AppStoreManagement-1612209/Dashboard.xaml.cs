@@ -114,5 +114,69 @@ namespace AppStoreManagement_1612209
                 itemListView.ItemsSource = dsSanPham.Skip((currentPage - 1) * rowPerPage).Take(6);
             }
         }
+
+
+        private void CbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //var sel = (ComboBoxItem)cbSort.SelectedItem;
+            //string value = sel.Name.ToString();
+            //MessageBox.Show(value);
+
+            //var sel = cbSort.SelectedIndex.ToString();
+            //MessageBox.Show(sel);
+
+            var sel = cbSort.SelectedIndex;
+            if (sel==0) // A-Z
+            {
+                currentPage = 1;
+                for (int i=0;i<dsSanPham.Count()-1;i++)
+                {
+                    for (int j=i+1;j<dsSanPham.Count();j++)
+                    {
+                        if (String.Compare(dsSanPham[i].TenSanPham,dsSanPham[j].TenSanPham)==1)
+                        {
+                            var temp = dsSanPham[i];
+                            dsSanPham[i] = dsSanPham[j];
+                            dsSanPham[j] = temp;
+                        }
+                    }
+                }
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+            else if (sel==1) // Z-A
+            {
+                currentPage = 1;
+                for (int i = 0; i < dsSanPham.Count() - 1; i++)
+                {
+                    for (int j = i + 1; j < dsSanPham.Count(); j++)
+                    {
+                        if (String.Compare(dsSanPham[i].TenSanPham, dsSanPham[j].TenSanPham) == -1)
+                        {
+                            var temp = dsSanPham[i];
+                            dsSanPham[i] = dsSanPham[j];
+                            dsSanPham[j] = temp;
+                        }
+                    }
+                }
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+            else // Type
+            {
+                currentPage = 1;
+                for (int i = 0; i < dsSanPham.Count() - 1; i++)
+                {
+                    for (int j = i + 1; j < dsSanPham.Count(); j++)
+                    {
+                        if (String.Compare(dsSanPham[i].MaLoaiSanPham, dsSanPham[j].MaLoaiSanPham) == 1)
+                        {
+                            var temp = dsSanPham[i];
+                            dsSanPham[i] = dsSanPham[j];
+                            dsSanPham[j] = temp;
+                        }
+                    }
+                }
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+        }
     }
 }

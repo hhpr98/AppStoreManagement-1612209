@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="LightCyan">
     <Canvas>
+
+        <Label Height="25" Width="80" Canvas.Left="730" Canvas.Top="50">Sắp xếp</Label>
+        <ComboBox Name="cbSort" Height="25" Width="150" Canvas.Left="800" Canvas.Top="50" SelectionChanged="CbSort_SelectionChanged">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_app/byAZ.png" Height="25" Width="25" />
+                    <TextBlock Name="tb1">Từ A -> Z</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_app/byZA.png" Height="25" Width="25" />
+                    <TextBlock>Từ Z -> A</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_app/byType.png" Height="25" Width="25" />
+                    <TextBlock>Theo loại</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+        
+        
         <ListView Name="itemListView" Height="400" Width="850" Canvas.Left="100" Canvas.Top="100" SelectionChanged="ItemListView_SelectionChanged">
 
             <ListView.ItemsPanel>
