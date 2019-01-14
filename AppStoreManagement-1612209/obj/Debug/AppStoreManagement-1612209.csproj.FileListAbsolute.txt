@@ -1,0 +1,15 @@
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\AppStoreManagement-1612209.exe.config
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\AppStoreManagement-1612209.exe
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\AppStoreManagement-1612209.pdb
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.csprojAssemblyReference.cache
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\MainWindow.g.cs
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\App.g.cs
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209_MarkupCompile.cache
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209_MarkupCompile.lref
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\MainWindow.baml
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.g.resources
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement_1612209.Properties.Resources.resources
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.csproj.GenerateResource.cache
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.csproj.CoreCompileInputs.cache
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.exe
+C:\Users\nguyenhuuhoa\Desktop\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\AppStoreManagement-1612209.pdb

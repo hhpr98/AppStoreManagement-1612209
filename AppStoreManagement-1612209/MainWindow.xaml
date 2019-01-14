@@ -1,0 +1,66 @@
+﻿<Window x:Class="AppStoreManagement_1612209.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Đăng nhập" Height="700" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Canvas>
+
+        <Canvas.Background>
+            <ImageBrush ImageSource="image/login1.jpg" Stretch="UniformToFill"/>
+        </Canvas.Background>
+
+        <Label Name="lblIntro1" Content="Chào mừng bạn đến với ứng dụng," Height="50" Width="500" 
+               Foreground="Black" FontSize="30" Canvas.Left="50" Canvas.Top="40">
+        </Label>
+        <Label Name="lblIntro2" Content="QUẢN LÍ NHÀ SÁCH" Height="60" Width="550"
+               Foreground="Black" FontSize="37" FontWeight="Bold" Canvas.Left="200" Canvas.Top="80">
+        </Label>
+
+        <Label Name="lblLogin" Content="Đăng nhập" Height="50" Width="200"
+               Foreground="LightSkyBlue" FontSize="30" FontWeight="Bold" Canvas.Top="160" Canvas.Left="120">
+        </Label>
+
+        <Canvas Height="200" Width="450" Canvas.Left="100" Canvas.Top="220" Background="LightBlue" >
+            <Label Name="lblUserName" Height="40" Width="150" Foreground="Black" FontSize="17" Canvas.Top="30" Canvas.Left="50"
+               Target="{Binding ElementName=txtUsername}">_Tên đăng nhập
+            </Label>
+            <TextBox Name="txtUsername" Height="30" Width="200" Background="LightCyan" Foreground="Gray"
+                 FontSize="17" Canvas.Top="30" Canvas.Left="200" GotFocus="txtUsername_GotFocus">Nhập tên đăng nhập tại đây
+            </TextBox>
+            <Image Name="imgIconUser" Source="image/icons8_User_Menu_Male_96px.png" Height="40" Width="40" Canvas.Top="30" Canvas.Left="10"></Image>
+
+            <Label Name="lblPassword" Height="40" Width="150" Foreground="Black" FontSize="17" Canvas.Top="90" Canvas.Left="50"
+               Target="{Binding ElementName=txtPassword}">_Mật khẩu
+            </Label>
+            <PasswordBox Name="txtPassword" Height="30" Width="200" Background="LightCyan" PasswordChar="*"
+                 FontSize="17" Canvas.Top="90" Canvas.Left="200" GotFocus="txtPassword_GotFocus" Loaded="txtPassword_Loaded">
+            </PasswordBox>
+            <Image Name="imgIconPassword" Height="40" Width="40" Canvas.Top="90" Canvas.Left="10" Source="image/icons8_Access_96px.png"></Image>
+
+            <CheckBox Name="cbRemember" Height="20" Width="120" Canvas.Top="155" Canvas.Left="50"
+                  FontSize="13" Foreground="Black">_Ghi nhớ tôi
+            </CheckBox>
+            <Button Name="btnLogin" Height="30" Width="120" Canvas.Top="140" Canvas.Left="220" FontSize="17" Foreground="Black" Click="btnLogin_Click">_Đăng nhập</Button>
+        </Canvas>
+
+        <TextBlock Name="txtb1" Height="50" Width="500" Canvas.Left="10" Canvas.Top="450">
+            <Label Name="lblSignIn" FontSize="17" Foreground="Black">Bạn không có tài khoản?</Label>
+            <Hyperlink Name="hplSignIn" NavigateUri="https://www.facebook.com/nguyenhuuhoa15.04.1998/" FontSize="20" BaselineAlignment="Top" Click="hplSignIn_Click" >Liên hệ với quản trị viên</Hyperlink>
+        </TextBlock>
+
+        <Label Name="lblInfor" Content="Copyright © 2018 by T4H" FontSize="13" Foreground="Black" Canvas.Top="530" Canvas.Left="200"></Label>
+
+        <Menu Height="20" Width="800" Background="LightGray">
+            <MenuItem Header="_Tệp">
+                <MenuItem Header="_Thoát" Click="Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Tùy chọn">
+                <MenuItem Header="_Thông tin" Click="About_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+    </Canvas>
+</Window>
