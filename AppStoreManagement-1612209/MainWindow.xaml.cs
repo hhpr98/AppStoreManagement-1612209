@@ -92,14 +92,14 @@ namespace AppStoreManagement_1612209
         /// <param name="e"></param>
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            {
-                tendangnhap = txtUsername.Text;
-                manv = "";
-                var windows = new Dashboard();
-                windows.Show();
-                this.Close();
-                return;
-            }
+            //{
+            //    tendangnhap = txtUsername.Text;
+            //    manv = "";
+            //    var windows = new Dashboard();
+            //    windows.Show();
+            //    this.Close();
+            //    return;
+            //}
 
 
             bool flags = true; // đăng nhập thất bại

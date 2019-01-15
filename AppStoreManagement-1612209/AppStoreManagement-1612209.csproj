@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChinhSuaSanPham.xaml.cs">
+      <DependentUpon>ChinhSuaSanPham.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietHoaDon.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
     <Compile Include="TimKiem.xaml.cs">
       <DependentUpon>TimKiem.xaml</DependentUpon>
     </Compile>
+    <Page Include="ChinhSuaSanPham.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -250,6 +257,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img_app\byZA.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\Edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\Remove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\Refresh.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="StoreModel.Context.tt">

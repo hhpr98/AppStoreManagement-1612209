@@ -8,6 +8,17 @@
         Title="Dashboard" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="LightCyan">
     <Canvas>
 
+        <Button Name="btnRefresh" Height="50" Width="80" Canvas.Left="150" Canvas.Top="20" Click="BtnRefresh_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/img_feature/Refresh.png" Height="25" Width="25"></Image>
+                        <Label Content="Refresh" HorizontalContentAlignment="Center"></Label>
+                    </StackPanel>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
         <Label Height="25" Width="50" Canvas.Left="300" Canvas.Top="50">Lọc</Label>
         <TextBox Name="txtFill" Width="200" Height="25" Canvas.Left="350" Canvas.Top="50" GotFocus="TxtFill_GotFocus" SelectionChanged="TxtFill_SelectionChanged"></TextBox>
         <ComboBox Name="cbFill" Height="25" Width="100" Canvas.Left="580" Canvas.Top="50" SelectionChanged="CbFill_SelectionChanged" Loaded="CbFill_Loaded"></ComboBox>

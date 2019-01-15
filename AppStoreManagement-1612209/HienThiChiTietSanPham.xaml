@@ -15,8 +15,31 @@
         <Label Name="lblGiaBan" Canvas.Left="550" Canvas.Top="205" FontSize="17" Width="300">Giá bán : 10000000 VNĐ</Label>
         <Image Source="/img_app/icon_OK.png" Width="20" Height="20" Canvas.Top="260" Canvas.Left="500"></Image>
         <Label Name="lblMoTa" Canvas.Left="550" Canvas.Top="255" FontSize="17" Width="400" Height="200">
-            <TextBlock Name="txtDescription" Text="Mô tả : Không có mô tả" TextWrapping="Wrap" /> <!--đa dòng-->
+            <TextBlock Name="txtDescription" Text="Mô tả : Không có mô tả" TextWrapping="Wrap" />
+            <!--đa dòng-->
         </Label>
+
+        <Button Name="btnEdit" Height="50" Width="80" Canvas.Left="550" Canvas.Top="400" Click="BtnEdit_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/img_feature/Edit.png" Height="25" Width="25"></Image>
+                        <Label Content="Chỉnh sửa" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
+                    </StackPanel>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Name="btnRemove" Height="50" Width="80" Canvas.Left="700" Canvas.Top="400" Click="BtnRemove_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/img_feature/Remove.png" Height="25" Width="25"></Image>
+                        <Label Content="Xóa" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
+                    </StackPanel>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Canvas>
 </Window>

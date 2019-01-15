@@ -284,5 +284,35 @@ namespace AppStoreManagement_1612209
                 itemListView.ItemsSource = dsSanPham.Take(6);
             }
         }
+
+        private void BtnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            txtFill.Text = "";
+            currentPage = 1;
+
+            var db = new StoreManagementEntities();
+
+            if (index_sel == 0) // Tất cả
+            {
+                dsSanPham = db.SanPhams.Where(sp => sp.isDeleted == 0).ToList();
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+            else
+            {
+                var temp_sp = db.SanPhams.Where(sp => sp.isDeleted == 0).ToList();
+                var temp_loaisp = db.LoaiSanPhams.ToList();
+                var maloaisp = temp_loaisp[index_sel - 1].MaLoaiSanPham;
+
+                dsSanPham.RemoveRange(0, dsSanPham.Count()); // remove all
+                foreach (var index in temp_sp)
+                {
+                    if (index.MaLoaiSanPham == maloaisp)
+                    {
+                        dsSanPham.Add(index);
+                    }
+                }
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+        }
     }
 }

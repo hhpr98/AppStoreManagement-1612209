@@ -1,0 +1,32 @@
+﻿<Window x:Class="AppStoreManagement_1612209.ChinhSuaSanPham"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Chỉnh sửa sản phẩm" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Canvas>
+        <Label Name="lblTitle" Content="Chỉnh sửa" Height="40" Width="600" FontSize="23" FontWeight="Bold"
+               HorizontalContentAlignment="Center" Canvas.Left="200" Canvas.Top="30" Foreground="Blue">
+        </Label>
+
+        <Label Name="lbl1" Height="40" Width="150" Canvas.Left="80" Canvas.Top="130" FontSize="17">Tên sản phẩm</Label>
+        <Label Name="lbl2" Height="40" Width="150" Canvas.Left="80" Canvas.Top="180" FontSize="17">Xuất xứ</Label>
+        <Label Name="lbl3" Height="40" Width="150" Canvas.Left="80" Canvas.Top="230" FontSize="17">Giá bán</Label>
+        <Label Name="lbl4" Height="40" Width="150" Canvas.Left="80" Canvas.Top="280" FontSize="17">Mô tả</Label>
+
+        <TextBox Name="txt1" Height="30" Width="500" Canvas.Left="230" Canvas.Top="130" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt2" Height="30" Width="500" Canvas.Left="230" Canvas.Top="180" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt3" Height="30" Width="500" Canvas.Left="230" Canvas.Top="230" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt4" Height="100" Width="500" Canvas.Left="230" Canvas.Top="280" Background="LightSkyBlue" FontSize="17" TextWrapping="Wrap"></TextBox>
+
+        <Button Name="btnOK" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="400" Canvas.Left="300" Click="BtnOK_Click">_Hoàn tất
+        </Button>
+
+        <Button Name="btnCancel" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="400" Canvas.Left="500" Click="BtnCancel_Click">_Hủy bỏ
+        </Button>
+    </Canvas>
+</Window>

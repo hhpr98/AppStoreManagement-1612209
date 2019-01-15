@@ -27,7 +27,10 @@ namespace AppStoreManagement_1612209
         public SanPham sp;
         public HienThiChiTietSanPham(SanPham sanphamSelected)
         {
-            this.sp = sanphamSelected;
+            //this.sp = sanphamSelected;
+            var db = new StoreManagementEntities(); ;
+            var item = db.SanPhams.Find(sanphamSelected.MaSanPham);
+            this.sp = item;
             InitializeComponent();
             //MessageBox.Show(sp.TenSanPham);
         }
@@ -43,6 +46,54 @@ namespace AppStoreManagement_1612209
             lblGiaBan.Content = giaban;
             var mota = "Mô tả \t: " + sp.MoTa;
             txtDescription.Text = mota;
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.tendangnhap!="admin")
+            {
+                var btn = MessageBoxButton.OK;
+                var img = MessageBoxImage.Stop;
+                var msg = "Lỗi : chỉ admin mới có quyền chỉnh sửa!";
+                MessageBox.Show(msg, "Thông báo", btn, img);
+            }
+            else
+            {
+                var windows = new ChinhSuaSanPham(sp);
+                windows.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.tendangnhap != "admin")
+            {
+                var btn = MessageBoxButton.OK;
+                var img = MessageBoxImage.Stop;
+                var msg = "Lỗi : chỉ admin mới có quyền xóa!";
+                MessageBox.Show(msg, "Thông báo", btn, img);
+            }
+            else
+            {
+                var db = new StoreManagementEntities();
+
+                var btn = MessageBoxButton.OKCancel;
+                var img = MessageBoxImage.Warning;
+                var msg = "Bạn chắc chắn muốn xóa sản phẩm này?";
+                var res = MessageBox.Show(msg, "Thông báo", btn, img,MessageBoxResult.Cancel);
+                if (res==MessageBoxResult.Cancel)
+                {
+                    // do nothing
+                }
+                else
+                {
+                    var itemToDel = db.SanPhams.Find(sp.MaSanPham);
+                    itemToDel.isDeleted = 1;
+                    db.SaveChanges();
+                    this.Close();
+                }
+            }
         }
     }
 }
