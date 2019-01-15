@@ -59,3 +59,5 @@ C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuN
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhapDetail.g.cs
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhap.baml
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhapDetail.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKe.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKe.baml

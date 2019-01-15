@@ -383,5 +383,11 @@ namespace AppStoreManagement_1612209
             var windows = new XemPhieuNhap();
             windows.ShowDialog();
         }
+
+        private void BtnThongKe_Click(object sender, RoutedEventArgs e)
+        {
+            var windows = new ThongKe();
+            windows.ShowDialog();
+        }
     }
 }

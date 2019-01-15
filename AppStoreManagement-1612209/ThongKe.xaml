@@ -1,0 +1,72 @@
+﻿<Window x:Class="AppStoreManagement_1612209.ThongKe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Thống kê" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="AliceBlue">
+    <Canvas>
+        <Border Name="borLine1" BorderBrush="Black" BorderThickness="1" Height="450" Canvas.Left="50" Canvas.Top="60" Width="400" Background="White"/>
+        <Label Canvas.Left="80" Canvas.Top="100" FontSize="17" FontWeight="Bold">Theo master data</Label>
+        <Image Source="/img_feature/TK_Master.jpg" Height="200" Width="350" Canvas.Left="70" Canvas.Top="250"></Image>
+
+        <ComboBox Name="cbMaster" Height="30" Width="180" Canvas.Left="250" Canvas.Top="100" SelectionChanged="CbMaster_SelectionChanged">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byDate.png" Height="25" Width="25" />
+                    <TextBlock Name="tb1">Theo ngày</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byMonth.png" Height="25" Width="25" />
+                    <TextBlock Name="tb2">Theo tháng</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byYear.png" Height="25" Width="25" />
+                    <TextBlock Name="tb3">Theo năm</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byDateToDate.png" Height="25" Width="25" />
+                    <TextBlock Name="tb4">Theo khoảng thời gian</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <Border Name="borLine2" BorderBrush="Black" BorderThickness="1" Height="450" Canvas.Left="500" Canvas.Top="60" Width="400" Background="White"/>
+        <Label Canvas.Left="520" Canvas.Top="100" FontSize="17" FontWeight="Bold">Theo doanh thu</Label>
+        <Image Source="/img_feature/TK_DoanhThu.jpg" Height="200" Width="350" Canvas.Left="530" Canvas.Top="250"></Image>
+
+        <ComboBox Name="cbMoney" Height="30" Width="180" Canvas.Left="680" Canvas.Top="100" SelectionChanged="CbMoney_SelectionChanged">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byDate.png" Height="25" Width="25" />
+                    <TextBlock Name="tb1_">Theo ngày</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byMonth.png" Height="25" Width="25" />
+                    <TextBlock Name="tb2_">Theo tháng</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byYear.png" Height="25" Width="25" />
+                    <TextBlock Name="tb3_">Theo năm</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/byDateToDate.png" Height="25" Width="25" />
+                    <TextBlock Name="tb4_">Theo khoảng thời gian</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+    </Canvas>
+</Window>

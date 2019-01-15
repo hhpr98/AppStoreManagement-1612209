@@ -165,7 +165,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Name="btnThongKe" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+            <Button Name="btnThongKe" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnThongKe_Click">
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">
