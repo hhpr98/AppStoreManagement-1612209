@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace AppStoreManagement_1612209
 {
     /// <summary>
-    /// Interaction logic for ThongKeMaster_TheoNgay.xaml
+    /// Interaction logic for ThongKeMaster_TheoThang.xaml
     /// </summary>
-    public partial class ThongKeMaster_TheoNgay : Window
+    public partial class ThongKeMaster_TheoThang : Window
     {
-        public ThongKeMaster_TheoNgay()
+        public ThongKeMaster_TheoThang()
         {
             InitializeComponent();
         }
@@ -30,48 +30,53 @@ namespace AppStoreManagement_1612209
             public int SoLuong { get; set; }
         }
 
-        public string getDateString(string date) // 1/13/2018 12:00:00 AM
+        public string getYear(string date) // 1/13/2018 12:00:00 AM
         {
             var index = date.IndexOf(' ');
-            var dateformat = date.Substring(0, index);
-            return dateformat;
+            var year = date.Substring(index-4,4);
+            return year;
         }
 
-       
+        public string getMonth(string date) // 1/13/2018 12:00:00 AM
+        {
+            var index = date.IndexOf('/');
+            var month = date.Substring(0,index);
+            return month;
+        }
+
         private void BtnStatis_Click(object sender, RoutedEventArgs e)
         {
 
-            if (picker.Text=="")
+            if (txtMonth.Text == "" || txtYear.Text=="" || int.Parse(txtMonth.Text)<1 || int.Parse(txtMonth.Text) > 12)
             {
                 var btn = MessageBoxButton.OK;
                 var img = MessageBoxImage.Error;
-                var msg = "Lỗi : Vui lòng chọn ngày hợp lệ!";
+                var msg = "Lỗi : Vui lòng chọn tháng, năm hợp lệ!";
                 MessageBox.Show(msg, "Thông báo", btn, img);
                 System.Collections.ArrayList data = new System.Collections.ArrayList();
                 chart.ItemsSource = data;
             }
             else
             {
-
                 var db = new StoreManagementEntities();
 
-                // Lấy những hóa đơn có ngày cần tra
+                // Lấy những hóa đơn có tháng cần tra
                 List<string> list_mahd = new List<string>();
 
                 foreach (var index in db.HoaDons)
                 {
-                    var date = getDateString(index.NgayXuatHoaDon.ToString());
-                    if (date==picker.Text)
+                    var date = index.NgayXuatHoaDon.ToString();
+                    if (getMonth(date) == txtMonth.Text && getYear(date)==txtYear.Text) // cùng tháng cùng năm
                     {
                         list_mahd.Add(index.MaHoaDon);
                     }
                 }
 
-                if (list_mahd.Count()==0) // không có hóa đơn nào trong ngày này
+                if (list_mahd.Count() == 0) // không có hóa đơn nào trong tháng này
                 {
                     var btn = MessageBoxButton.OK;
                     var img = MessageBoxImage.Information;
-                    var msg = "Ngày bạn chọn không có sản phẩm nào được bán!";
+                    var msg = "Tháng bạn chọn không có sản phẩm nào được bán!";
                     MessageBox.Show(msg, "Thông báo", btn, img);
                     System.Collections.ArrayList data1 = new System.Collections.ArrayList();
                     chart.ItemsSource = data1;
@@ -95,7 +100,7 @@ namespace AppStoreManagement_1612209
                 {
                     if (dic.ContainsKey(index.MaSanPham))  // đã tồn tại chuỗi này rồi
                     {
-                        dic[index.MaSanPham]+=(int)index.SoLuong; // tăng value của chuỗi này lên số lượng
+                        dic[index.MaSanPham] += (int)index.SoLuong; // tăng value của chuỗi này lên số lượng
                     }
                     else
                     {
@@ -115,8 +120,6 @@ namespace AppStoreManagement_1612209
                 }
 
                 chart.ItemsSource = data;
-
-
             }
         }
     }

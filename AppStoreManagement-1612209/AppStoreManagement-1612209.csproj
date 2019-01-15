@@ -145,8 +145,17 @@
     <Compile Include="ThongKe.xaml.cs">
       <DependentUpon>ThongKe.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ThongKeMaster_TheoKhoangThoiGian.xaml.cs">
+      <DependentUpon>ThongKeMaster_TheoKhoangThoiGian.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeMaster_TheoNam.xaml.cs">
+      <DependentUpon>ThongKeMaster_TheoNam.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ThongKeMaster_TheoNgay.xaml.cs">
       <DependentUpon>ThongKeMaster_TheoNgay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeMaster_TheoThang.xaml.cs">
+      <DependentUpon>ThongKeMaster_TheoThang.xaml</DependentUpon>
     </Compile>
     <Compile Include="TimKiem.xaml.cs">
       <DependentUpon>TimKiem.xaml</DependentUpon>
@@ -210,7 +219,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ThongKeMaster_TheoKhoangThoiGian.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongKeMaster_TheoNam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ThongKeMaster_TheoNgay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongKeMaster_TheoThang.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -298,6 +319,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img_feature\byYear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\chart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="StoreModel.Context.tt">

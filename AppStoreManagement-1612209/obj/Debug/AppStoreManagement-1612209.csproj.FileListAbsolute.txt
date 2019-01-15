@@ -67,3 +67,9 @@ C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\System.Wi
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\WPFToolkit.dll
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoThang.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoThang.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoNam.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoNam.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoKhoangThoiGian.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoKhoangThoiGian.baml

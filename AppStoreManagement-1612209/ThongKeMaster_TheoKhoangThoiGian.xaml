@@ -1,4 +1,4 @@
-﻿<Window x:Class="AppStoreManagement_1612209.ThongKeMaster_TheoNgay"
+﻿<Window x:Class="AppStoreManagement_1612209.ThongKeMaster_TheoKhoangThoiGian"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:AppStoreManagement_1612209"
         xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         mc:Ignorable="d"
-        Title="Thống kê Master (Theo ngày)" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="AliceBlue">
+        Title="Thống kê Master (Theo khoảng thời gian)" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="AliceBlue">
     <Canvas>
-        <Label Name="lblTitle" Content="THỐNG KÊ MASTER DATA (Theo ngày)" HorizontalContentAlignment="Center" Height="50"
+        <Label Name="lblTitle" Content="THỐNG KÊ MASTER DATA (Theo khoảng thời gian)" HorizontalContentAlignment="Center" Height="50"
                Width="800" Canvas.Top="14" Canvas.Left="100" FontSize="23" FontWeight="Bold" Foreground="Blue">
         </Label>
 
-        <Label Canvas.Left="250" Canvas.Top="80">Vui lòng chọn ngày</Label>
-        <DatePicker Name="picker" Canvas.Left="400" Canvas.Top="80"></DatePicker>
+        <Label Canvas.Left="250" Canvas.Top="80">Từ</Label>
+        <DatePicker Name="picker1" Canvas.Left="280" Canvas.Top="80"></DatePicker>
+        <Label Canvas.Left="380" Canvas.Top="80">Đến</Label>
+        <DatePicker Name="picker2" Canvas.Left="410" Canvas.Top="80"></DatePicker>
         <Button Name="btnStatis" Height="30" Width="80" Canvas.Left="530" Canvas.Top="70" Click="BtnStatis_Click">
             <Button.Template>
                 <ControlTemplate>
@@ -24,7 +26,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        
+
         <DVC:Chart Width="500" Height="400" Canvas.Top="100" Canvas.Left="250" BorderBrush="Transparent" >
             <DVC:Chart.Series>
                 <DVC:PieSeries Name="chart" BorderBrush="Transparent"

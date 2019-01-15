@@ -35,17 +35,20 @@ namespace AppStoreManagement_1612209
 
             if (sel == 1)
             {
-
+                var windows = new ThongKeMaster_TheoThang();
+                windows.ShowDialog();
             }
 
             if (sel == 2)
             {
-
+                var windows = new ThongKeMaster_TheoNam();
+                windows.ShowDialog();
             }
 
             if (sel == 3)
             {
-
+                var windows = new ThongKeMaster_TheoKhoangThoiGian();
+                windows.ShowDialog();
             }
 
             cbMaster.SelectedIndex = -1;
@@ -56,22 +59,26 @@ namespace AppStoreManagement_1612209
             var sel = cbMoney.SelectedIndex;
             if (sel == 0)
             {
-
+                var windows = new ThongKeDoanhThu_TheoNgay();
+                windows.ShowDialog();
             }
 
             if (sel == 1)
             {
-
+                var windows = new ThongKeDoanhThu_TheoThang();
+                windows.ShowDialog();
             }
 
             if (sel == 2)
             {
-
+                var windows = new ThongKeDoanhThu_TheoNam();
+                windows.ShowDialog();
             }
 
             if (sel == 3)
             {
-
+                var windows = new ThongKeDoanhThu_TheoKhoangThoiGian();
+                windows.ShowDialog();
             }
 
             cbMoney.SelectedIndex = -1;
