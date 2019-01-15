@@ -89,6 +89,7 @@
           <ScalarProperty Name="MaLoaiSanPham" ColumnName="MaLoaiSanPham" />
           <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
           <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
         </MappingFragment>
       </EntityTypeMapping>

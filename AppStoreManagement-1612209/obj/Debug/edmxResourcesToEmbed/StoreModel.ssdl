@@ -82,6 +82,7 @@
     <Property Name="MaLoaiSanPham" Type="nvarchar" MaxLength="10" />
     <Property Name="HinhAnh" Type="ntext" />
     <Property Name="MoTa" Type="ntext" />
+    <Property Name="SoLuong" Type="int" />
     <Property Name="isDeleted" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">

@@ -41,6 +41,8 @@ namespace AppStoreManagement_1612209
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            lblWho.Content = MainWindow.tendangnhap;
+
             currentPage = 1;
             dsSanPham = getItems();
             itemListView.ItemsSource = dsSanPham.Take(6);
@@ -312,6 +314,45 @@ namespace AppStoreManagement_1612209
                     }
                 }
                 itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+        }
+
+        private void BtnDangXuat_Click(object sender, RoutedEventArgs e)
+        {
+            var windows = new MainWindow();
+            windows.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnDangKi_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.tendangnhap=="admin")
+            {
+                var windows = new DangKi();
+                windows.ShowDialog();
+            }
+            else
+            {
+                var btn = MessageBoxButton.OK;
+                var icon = MessageBoxImage.Error;
+                var msg = "Lỗi : Chức năng chỉ dành cho admin";
+                MessageBox.Show(msg, "Thông báo", btn, icon);
+            }
+        }
+
+        private void BtnBanHang_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.tendangnhap == "admin")
+            {
+                var btn = MessageBoxButton.OK;
+                var icon = MessageBoxImage.Error;
+                var msg = "Lỗi : Chỉ nhân viên mới tham gia bán hàng!";
+                MessageBox.Show(msg, "Thông báo", btn, icon);
+            }
+            else
+            {
+                var windows = new BanHang();
+                windows.ShowDialog();
             }
         }
     }

@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconapp.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -64,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BanHang.xaml.cs">
+      <DependentUpon>BanHang.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChinhSuaSanPham.xaml.cs">
       <DependentUpon>ChinhSuaSanPham.xaml</DependentUpon>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="ChiTietPhieuNhap.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DangKi.xaml.cs">
+      <DependentUpon>DangKi.xaml</DependentUpon>
     </Compile>
     <Compile Include="HienThiChiTietSanPham.xaml.cs">
       <DependentUpon>HienThiChiTietSanPham.xaml</DependentUpon>
@@ -121,7 +130,15 @@
     <Compile Include="TimKiem.xaml.cs">
       <DependentUpon>TimKiem.xaml</DependentUpon>
     </Compile>
+    <Page Include="BanHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChinhSuaSanPham.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DangKi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,7 +208,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="img_app\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="StoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreModel.edmx</DependentUpon>
+      <LastGenOutput>StoreModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="StoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreModel.edmx</DependentUpon>
+      <LastGenOutput>StoreModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="img_app\icons8_Access_96px.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -268,16 +299,42 @@
     <Resource Include="img_feature\Refresh.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Content Include="StoreModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StoreModel.edmx</DependentUpon>
-      <LastGenOutput>StoreModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="StoreModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StoreModel.edmx</DependentUpon>
-      <LastGenOutput>StoreModel.cs</LastGenOutput>
-    </Content>
+    <Resource Include="img_feature\DangKi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\DangXuat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\NhapSach.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\ThongKe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\XemPhieuNhapSach.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\hw_20p.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\ss_j4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\ipad_2018.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\ss_a8star.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\op_a3s.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\ss_a6plus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="iconapp.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

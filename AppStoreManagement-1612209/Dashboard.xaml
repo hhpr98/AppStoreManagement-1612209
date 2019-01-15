@@ -8,7 +8,10 @@
         Title="Dashboard" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="LightCyan">
     <Canvas>
 
-        <Button Name="btnRefresh" Height="50" Width="80" Canvas.Left="150" Canvas.Top="20" Click="BtnRefresh_Click">
+        <Label Canvas.Left="10" Canvas.Top="10">Xin chào, </Label>
+        <Label Name="lblWho" Canvas.Left="70" Canvas.Top="10" Foreground="Red" FontWeight="Bold">admin</Label>
+
+        <Button Name="btnRefresh" Height="50" Width="80" Canvas.Left="0" Canvas.Top="30" Margin="0,10,0,-10" Click="BtnRefresh_Click">
             <Button.Template>
                 <ControlTemplate>
                     <StackPanel Orientation="Vertical">
@@ -63,8 +66,8 @@
                             <Label Name="lvCost" Content="{Binding GiaBan,StringFormat='{}#,##0VNĐ'}" Height="30" Width="80" Canvas.Top="10" Canvas.Left="180"
                                     Background="Red" Foreground="White" FontSize="13" HorizontalContentAlignment="Center">
                             </Label>
-                            <Label Name="lvName" Content="{Binding TenSanPham}" Height="30" Width="180" Canvas.Top="150" Canvas.Left="10" FontWeight="Bold"
-                                    Background="Transparent" Foreground="Black" FontSize="13" HorizontalContentAlignment="Center">
+                            <Label Name="lvName" Content="{Binding TenSanPham}" Height="30" Width="250" Canvas.Top="150" Canvas.Left="30" FontWeight="Bold"
+                                    Background="Transparent" Foreground="Black" FontSize="13" HorizontalContentAlignment="Left">
                             </Label>
                         </Canvas>
                     </Border>
@@ -107,7 +110,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Name="btnBanHang" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+            <Button Name="btnBanHang" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnBanHang_Click">
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">
@@ -133,7 +136,7 @@
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">
-                            <Image Source="/img_feature/TimKiem.png" Height="25" Width="25"></Image>
+                            <Image Source="/img_feature/NhapSach.png" Height="25" Width="25"></Image>
                             <Label Content="Nhập hàng" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
                         </StackPanel>
                     </ControlTemplate>
@@ -144,8 +147,41 @@
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">
-                            <Image Source="/img_feature/TimKiem.png" Height="25" Width="25"></Image>
+                            <Image Source="/img_feature/XemPhieuNhapSach.png" Height="25" Width="25"></Image>
                             <Label Content="Phiếu nhập" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Name="btnDangKi" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnDangKi_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/img_feature/DangKi.png" Height="25" Width="25"></Image>
+                            <Label Content="Đăng kí" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Name="btnThongKe" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+                <Button.Template>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/img_feature/ThongKe.png" Height="25" Width="25"></Image>
+                            <Label Content="Thống kê" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Name="btnDangXuat" Click="BtnDangXuat_Click" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+                <Button.Template>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/img_feature/DangXuat.png" Height="25" Width="25"></Image>
+                            <Label Content="Đăng xuất" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
                         </StackPanel>
                     </ControlTemplate>
                 </Button.Template>

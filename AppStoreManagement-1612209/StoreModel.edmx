@@ -87,6 +87,7 @@
           <Property Name="MaLoaiSanPham" Type="nvarchar" MaxLength="10" />
           <Property Name="HinhAnh" Type="ntext" />
           <Property Name="MoTa" Type="ntext" />
+          <Property Name="SoLuong" Type="int" />
           <Property Name="isDeleted" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -367,6 +368,7 @@
           <Property Name="MaLoaiSanPham" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoLuong" Type="Int32" />
           <Property Name="isDeleted" Type="Int32" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_SanPham" FromRole="SanPham" ToRole="ChiTietHoaDon" />
           <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK_ChiTietPhieuNhap_SanPham" FromRole="SanPham" ToRole="ChiTietPhieuNhap" />
@@ -644,6 +646,7 @@
                 <ScalarProperty Name="MaLoaiSanPham" ColumnName="MaLoaiSanPham" />
                 <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
               </MappingFragment>
             </EntityTypeMapping>

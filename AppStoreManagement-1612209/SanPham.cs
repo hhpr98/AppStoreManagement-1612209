@@ -30,6 +30,7 @@ namespace AppStoreManagement_1612209
         public string MaLoaiSanPham { get; set; }
         public string HinhAnh { get; set; }
         public string MoTa { get; set; }
+        public Nullable<int> SoLuong { get; set; }
         public Nullable<int> isDeleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

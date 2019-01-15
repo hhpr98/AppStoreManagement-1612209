@@ -1,0 +1,44 @@
+﻿<Window x:Class="AppStoreManagement_1612209.DangKi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Đăng kí tài khoản" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Label Name="lblTitle" Content="ĐĂNG KÍ TÀI KHOẢN" HorizontalContentAlignment="Center" Height="50"
+               Width="400" Canvas.Top="30" Canvas.Left="200" FontSize="23" FontWeight="Bold" Foreground="Blue">
+        </Label>
+
+        <Label Name="lbl1" Height="40" Width="150" Canvas.Left="80" Canvas.Top="130" FontSize="17">Họ và tên</Label>
+        <Label Name="lbl2" Height="40" Width="150" Canvas.Left="80" Canvas.Top="180" FontSize="17">Tên đăng nhập</Label>
+        <Label Name="lbl3" Height="40" Width="150" Canvas.Left="80" Canvas.Top="230" FontSize="17">Mật khẩu</Label>
+        <Label Name="lbl4" Height="40" Width="150" Canvas.Left="80" Canvas.Top="280" FontSize="17">Nhập lại mật khẩu</Label>
+        <Label Name="lbl5" Height="40" Width="150" Canvas.Left="80" Canvas.Top="330" FontSize="17">Mã xác nhận</Label>
+        <Label Name="lbl6" Height="40" Width="150" Canvas.Left="650" Canvas.Top="330" FontSize="17" Loaded="Lbl6_Loaded">123456789012345</Label>
+
+        <Button Name="btnRefresh" Height="25" Width="25" Canvas.Left="850" Canvas.Top="330" Click="BtnRefresh_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/img_feature/Refresh.png" Height="25" Width="25" ></Image>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
+        <TextBox Name="txt1" Height="30" Width="400" Canvas.Left="230" Canvas.Top="130" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt2" Height="30" Width="400" Canvas.Left="230" Canvas.Top="180" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <PasswordBox Name="txt3" Height="30" Width="400" Canvas.Left="230" Canvas.Top="230" Background="LightSkyBlue" FontSize="17"></PasswordBox>
+        <PasswordBox Name="txt4" Height="30" Width="400" Canvas.Left="230" Canvas.Top="280" Background="LightSkyBlue" FontSize="17"></PasswordBox>
+        <TextBox Name="txt5" Height="30" Width="400" Canvas.Left="230" Canvas.Top="330" Background="LightSkyBlue" FontSize="17"></TextBox>
+
+
+        <Button Name="btnOK" Click="BtnOK_Click" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="460" Canvas.Left="200">_Đăng kí
+        </Button>
+
+        <Button Name="btnCancel" Click="BtnCancel_Click" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="460" Canvas.Left="450">_Hủy bỏ
+        </Button>
+    </Canvas>
+</Window>

@@ -96,6 +96,7 @@
     <Property Name="MaLoaiSanPham" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" />
     <Property Name="isDeleted" Type="Int32" />
     <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_SanPham" FromRole="SanPham" ToRole="ChiTietHoaDon" />
     <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK_ChiTietPhieuNhap_SanPham" FromRole="SanPham" ToRole="ChiTietPhieuNhap" />
