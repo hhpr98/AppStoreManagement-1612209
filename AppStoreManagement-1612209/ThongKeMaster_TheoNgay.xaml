@@ -4,9 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         mc:Ignorable="d"
-        Title="ThongKeMaster_TheoNgay" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Thống kê Master (Theo ngày)" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <DVC:Chart Width="500" Height="400" Canvas.Top="138" Canvas.Left="55" BorderBrush="Transparent" >
+            <DVC:Chart.Series>
+                <DVC:PieSeries Name="chart" BorderBrush="Transparent"
+                
+                    IndependentValueBinding="{Binding name}"
+                    DependentValueBinding="{Binding amount}">
+                </DVC:PieSeries>
+            </DVC:Chart.Series>
+        </DVC:Chart>
+    </Canvas>
 </Window>

@@ -61,3 +61,9 @@ C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuN
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhapDetail.baml
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKe.g.cs
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKe.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoNgay.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\ThongKeMaster_TheoNgay.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\bin\Debug\WPFToolkit.dll

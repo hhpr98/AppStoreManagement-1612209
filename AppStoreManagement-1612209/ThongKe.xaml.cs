@@ -30,6 +30,7 @@ namespace AppStoreManagement_1612209
             if (sel == 0)
             {
                 var windows = new ThongKeMaster_TheoNgay();
+                windows.ShowDialog();
             }
 
             if (sel == 1)
