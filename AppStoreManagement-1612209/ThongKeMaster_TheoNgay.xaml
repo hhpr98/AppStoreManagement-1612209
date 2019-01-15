@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Thống kê Master (Theo ngày)" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="AliceBlue">
     <Canvas>
-        <Label Name="lblTitle" Content="THỐNG KÊ MASTER DATA (Theo ngày)" HorizontalContentAlignment="Center" Height="50"
+        <Label Name="lblTitle" Content="THỐNG KÊ SẢN PHẨM (Theo ngày)" HorizontalContentAlignment="Center" Height="50"
                Width="800" Canvas.Top="14" Canvas.Left="100" FontSize="23" FontWeight="Bold" Foreground="Blue">
         </Label>
 

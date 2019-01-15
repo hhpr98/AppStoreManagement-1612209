@@ -145,6 +145,18 @@
     <Compile Include="ThongKe.xaml.cs">
       <DependentUpon>ThongKe.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ThongKeDoanhThu_TheoKhoangThoiGian.xaml.cs">
+      <DependentUpon>ThongKeDoanhThu_TheoKhoangThoiGian.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeDoanhThu_TheoNam.xaml.cs">
+      <DependentUpon>ThongKeDoanhThu_TheoNam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeDoanhThu_TheoNgay.xaml.cs">
+      <DependentUpon>ThongKeDoanhThu_TheoNgay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeDoanhThu_TheoThang.xaml.cs">
+      <DependentUpon>ThongKeDoanhThu_TheoThang.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ThongKeMaster_TheoKhoangThoiGian.xaml.cs">
       <DependentUpon>ThongKeMaster_TheoKhoangThoiGian.xaml</DependentUpon>
     </Compile>
@@ -216,6 +228,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ThongKe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongKeDoanhThu_TheoKhoangThoiGian.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongKeDoanhThu_TheoNam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongKeDoanhThu_TheoNgay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongKeDoanhThu_TheoThang.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

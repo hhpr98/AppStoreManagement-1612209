@@ -4,9 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         mc:Ignorable="d"
-        Title="ThongKeDoanhThu_TheoNgay" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Thống kê doanh thu (Theo ngày)" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="AliceBlue">
+    <Canvas>
+        <Label Name="lblTitle" Content="THỐNG KÊ DOANH THU (Theo ngày)" HorizontalContentAlignment="Center" Height="50"
+               Width="800" Canvas.Top="14" Canvas.Left="100" FontSize="23" FontWeight="Bold" Foreground="Blue">
+        </Label>
+
+        <Label Canvas.Left="250" Canvas.Top="80">Vui lòng chọn ngày</Label>
+        <DatePicker Name="picker" Canvas.Left="400" Canvas.Top="80"></DatePicker>
+        <Button Name="btnStatis" Height="30" Width="80" Canvas.Left="530" Canvas.Top="70" Click="BtnStatis_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/img_feature/chart.png" Height="25" Width="25"></Image>
+                        <Label Content="Xem" HorizontalContentAlignment="Center" Foreground="Red"></Label>
+                    </StackPanel>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <DVC:Chart Width="500" Height="400" Canvas.Top="100" Canvas.Left="250" BorderBrush="Transparent" >
+            <DVC:Chart.Series>
+                <DVC:ColumnSeries Name="chart" BorderBrush="Transparent" Title="Doanh thu"
+                    IndependentValueBinding="{Binding Loai}"
+                    DependentValueBinding="{Binding DoanhThu}">
+                </DVC:ColumnSeries>
+            </DVC:Chart.Series>
+        </DVC:Chart>
+    </Canvas>
 </Window>
