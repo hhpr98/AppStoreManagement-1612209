@@ -178,5 +178,111 @@ namespace AppStoreManagement_1612209
                 itemListView.ItemsSource = dsSanPham.Take(6);
             }
         }
+
+        List<string> type = new List<string>();
+        int index_sel = 0;
+
+        private void CbFill_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            index_sel = cbFill.SelectedIndex;
+
+            txtFill.Text = "";
+            currentPage = 1;
+
+            var db = new StoreManagementEntities();
+
+            if (index_sel == 0) // Tất cả
+            {
+                dsSanPham = db.SanPhams.Where(sp => sp.isDeleted == 0).ToList();
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+            else
+            {
+                var temp_sp = db.SanPhams.Where(sp => sp.isDeleted == 0).ToList();
+                var temp_loaisp = db.LoaiSanPhams.ToList();
+                var maloaisp = temp_loaisp[index_sel - 1].MaLoaiSanPham;
+
+                dsSanPham.RemoveRange(0, dsSanPham.Count()); // remove all
+                foreach (var index in temp_sp)
+                {
+                    if (index.MaLoaiSanPham == maloaisp)
+                    {
+                        dsSanPham.Add(index);
+                    }
+                }
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+        }
+
+        private void CbFill_Loaded(object sender, RoutedEventArgs e)
+        {
+            type.Add("Tất cả");
+            var db = new StoreManagementEntities();
+
+            foreach (var index in db.LoaiSanPhams)
+            {
+                type.Add(index.TenLoaiSanPham);
+            }
+            cbFill.ItemsSource = type;
+        }
+
+        private void TxtFill_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtFill.Text = "";
+            currentPage = 1;
+        }
+
+
+        private void TxtFill_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(txtFill.Text);
+
+            var db = new StoreManagementEntities();
+
+            // Lấy lại danh sách sản phẩm
+            if (index_sel == 0)
+            {
+                dsSanPham = db.SanPhams.Where(sp => sp.isDeleted == 0).ToList();
+            }
+            else
+            {
+                var temp_sp = db.SanPhams.Where(sp => sp.isDeleted == 0).ToList();
+                var temp_loaisp = db.LoaiSanPhams.ToList();
+                var maloaisp = temp_loaisp[index_sel - 1].MaLoaiSanPham;
+
+                dsSanPham.RemoveRange(0, dsSanPham.Count()); // remove all
+                foreach (var index in temp_sp)
+                {
+                    if (index.MaLoaiSanPham == maloaisp)
+                    {
+                        dsSanPham.Add(index);
+                    }
+                }
+            }
+
+            if (txtFill.Text=="")
+            {
+                itemListView.ItemsSource = dsSanPham.Take(6);
+                //MessageBox.Show(itemsListViewTemp.Count().ToString());
+            }
+            else
+            {
+                var temp = new List<SanPham>();
+                foreach (var index in dsSanPham)
+                {
+                    temp.Add(index);
+                } // copy thủ công, chứ gán trực tiếp temp = dsSanPham thì khi xóa dsSanPham thì temp cũng null
+                dsSanPham.RemoveRange(0, dsSanPham.Count());
+                foreach (var index in temp)
+                {
+                    if (index.TenSanPham.ToLower().Contains(txtFill.Text.ToLower()))
+                    {
+                        dsSanPham.Add(index);
+                    }
+                }
+                currentPage = 1;
+                itemListView.ItemsSource = dsSanPham.Take(6);
+            }
+        }
     }
 }

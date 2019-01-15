@@ -8,6 +8,11 @@
         Title="Dashboard" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="LightCyan">
     <Canvas>
 
+        <Label Height="25" Width="50" Canvas.Left="300" Canvas.Top="50">Lọc</Label>
+        <TextBox Name="txtFill" Width="200" Height="25" Canvas.Left="350" Canvas.Top="50" GotFocus="TxtFill_GotFocus" SelectionChanged="TxtFill_SelectionChanged"></TextBox>
+        <ComboBox Name="cbFill" Height="25" Width="100" Canvas.Left="580" Canvas.Top="50" SelectionChanged="CbFill_SelectionChanged" Loaded="CbFill_Loaded"></ComboBox>
+
+
         <Label Height="25" Width="80" Canvas.Left="730" Canvas.Top="50">Sắp xếp</Label>
         <ComboBox Name="cbSort" Height="25" Width="150" Canvas.Left="800" Canvas.Top="50" SelectionChanged="CbSort_SelectionChanged">
             <ComboBoxItem>

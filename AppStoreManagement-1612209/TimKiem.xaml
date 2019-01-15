@@ -28,6 +28,8 @@
         <TextBox Name="txtType" Height="30" Width="350" Background="White"  Foreground="Black" FontSize="20"
                  HorizontalContentAlignment="Left" Canvas.Left="350" Canvas.Top="235" GotFocus="TxtType_GotFocus">
         </TextBox>
+        <ComboBox Name="itemCombo" Height="25" Width="150" Canvas.Left="720" Canvas.Top="235" SelectionChanged="ItemCombo_SelectionChanged" Loaded="ItemCombo_Loaded">
+        </ComboBox>
 
         <Button Name="btnSearch" Height="40" Width="100" FontSize="20" Foreground="Red" FontWeight="Bold"
                 Canvas.Left="300" Canvas.Top="350" Click="btnSearch_Click">_Tìm kiếm</Button>

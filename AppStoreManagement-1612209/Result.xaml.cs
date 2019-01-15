@@ -54,7 +54,7 @@ namespace AppStoreManagement_1612209
 
                 foreach (var index in db.SanPhams)
                 {
-                    if (index.isDeleted==0 && index.TenSanPham.ToLower() == name_text.ToLower()) // tìm thấy tên
+                    if (index.isDeleted==0 && index.TenSanPham.ToLower().Contains(name_text.ToLower())) // tìm thấy 1 phần của tên
                     {
                         items.Add(index);
                     }
@@ -100,7 +100,7 @@ namespace AppStoreManagement_1612209
 
                 foreach (var index in db.SanPhams)
                 {
-                    if (index.isDeleted == 0 && index.TenSanPham.ToLower() == name_text.ToLower() && index.MaLoaiSanPham==maloaisp) // tìm thấy tên và mã loại
+                    if (index.isDeleted == 0 && index.TenSanPham.ToLower().Contains(name_text.ToLower()) && index.MaLoaiSanPham==maloaisp) // tìm thấy tên và mã loại
                     {
                         items.Add(index);
                     }

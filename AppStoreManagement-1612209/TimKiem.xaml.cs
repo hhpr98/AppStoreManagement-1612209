@@ -131,5 +131,30 @@ namespace AppStoreManagement_1612209
             }
         }
 
+        List<string> type = new List<string>();
+
+        private void ItemCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if (check[1]=='0') // check type checkbox
+            //{
+            //    check = check.Remove(1, 1);
+            //    check = check.Insert(1, "1");
+            //}
+            var sel = itemCombo.SelectedIndex;
+            txtType.Text = type[sel];
+        }
+
+        private void ItemCombo_Loaded(object sender, RoutedEventArgs e)
+        {
+            var db = new StoreManagementEntities();
+
+            var item = db.LoaiSanPhams.ToList();
+            
+            foreach (var index in item)
+            {
+                type.Add(index.TenLoaiSanPham);
+            }
+            itemCombo.ItemsSource = type;
+        }
     }
 }
