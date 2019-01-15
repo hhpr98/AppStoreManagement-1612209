@@ -121,7 +121,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Name="btnHoaDon" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+            <Button Name="btnHoaDon" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnHoaDon_Click">
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">
@@ -132,7 +132,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Name="btnNhapHang" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+            <Button Name="btnNhapHang" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnNhapHang_Click">
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">
@@ -143,7 +143,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Name="btnPhieuNhap" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10">
+            <Button Name="btnPhieuNhap" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnPhieuNhap_Click">
                 <Button.Template>
                     <ControlTemplate>
                         <StackPanel Orientation="Vertical">

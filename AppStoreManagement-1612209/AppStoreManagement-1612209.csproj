@@ -97,6 +97,9 @@
     <Compile Include="NhanVien.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="NhapHang.xaml.cs">
+      <DependentUpon>NhapHang.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PhieuNhap.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
     </Compile>
@@ -129,6 +132,18 @@
     </Compile>
     <Compile Include="TimKiem.xaml.cs">
       <DependentUpon>TimKiem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XemHoaDon.xaml.cs">
+      <DependentUpon>XemHoaDon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XemHoaDonDetail.xaml.cs">
+      <DependentUpon>XemHoaDonDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XemPhieuNhap.xaml.cs">
+      <DependentUpon>XemPhieuNhap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XemPhieuNhapDetail.xaml.cs">
+      <DependentUpon>XemPhieuNhapDetail.xaml</DependentUpon>
     </Compile>
     <Page Include="BanHang.xaml">
       <SubType>Designer</SubType>
@@ -165,11 +180,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NhapHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Result.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TimKiem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XemHoaDon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XemHoaDonDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XemPhieuNhap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XemPhieuNhapDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,6 +245,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img_app\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\hw_y7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\nk_81.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="produce\op_f9.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="StoreModel.Context.tt">

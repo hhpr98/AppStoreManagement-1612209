@@ -49,3 +49,13 @@ C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\DangKi.g.
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\DangKi.baml
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\BanHang.g.cs
 C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\BanHang.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\NhapHang.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\NhapHang.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemHoaDon.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemHoaDonDetail.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemHoaDon.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemHoaDonDetail.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhap.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhapDetail.g.cs
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhap.baml
+C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\XemPhieuNhapDetail.baml

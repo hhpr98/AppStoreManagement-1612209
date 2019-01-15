@@ -355,5 +355,33 @@ namespace AppStoreManagement_1612209
                 windows.ShowDialog();
             }
         }
+
+        private void BtnNhapHang_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.tendangnhap == "admin")
+            {
+                var btn = MessageBoxButton.OK;
+                var icon = MessageBoxImage.Error;
+                var msg = "Lỗi : Chỉ nhân viên mới tham gia nhập hàng!";
+                MessageBox.Show(msg, "Thông báo", btn, icon);
+            }
+            else
+            {
+                var windows = new NhapHang();
+                windows.ShowDialog();
+            }
+        }
+
+        private void BtnHoaDon_Click(object sender, RoutedEventArgs e)
+        {
+            var windows = new XemHoaDon();
+            windows.ShowDialog();
+        }
+
+        private void BtnPhieuNhap_Click(object sender, RoutedEventArgs e)
+        {
+            var windows = new XemPhieuNhap();
+            windows.ShowDialog();
+        }
     }
 }

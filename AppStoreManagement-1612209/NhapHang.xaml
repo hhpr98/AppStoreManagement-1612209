@@ -1,0 +1,85 @@
+﻿<Window x:Class="AppStoreManagement_1612209.NhapHang"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Nhập hàng" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Canvas>
+        <Label Name="lblTitle" Content="CHỨC NĂNG NHẬP HÀNG" HorizontalContentAlignment="Center" Height="50"
+               Width="800" Canvas.Top="14" Canvas.Left="100" FontSize="23" FontWeight="Bold" Foreground="Blue">
+        </Label>
+
+        <Label Name="lbl1" Height="40" Width="150" Canvas.Left="80" Canvas.Top="80" FontSize="17">Mã phiếu nhập</Label>
+        <Label Name="lbl3" Height="40" Width="150" Canvas.Left="568" Canvas.Top="80" FontSize="17">Mã nhân viên</Label>
+        <Label Name="lbl4" Height="40" Width="150" Canvas.Left="568" Canvas.Top="130" FontSize="17">Ngày lập phiếu</Label>
+
+        <Label Name="lbl11" Height="40" Width="250" Canvas.Left="280" Canvas.Top="80" FontSize="17" FontWeight="Bold">HD001</Label>
+        <Label Name="lbl31" Height="40" Width="250" Canvas.Left="768" Canvas.Top="80" FontSize="17" FontWeight="Bold">NV001</Label>
+        <Label Name="lbl41" Height="40" Width="250" Canvas.Left="768" Canvas.Top="130" FontSize="17" FontWeight="Bold">01/01/2019</Label>
+
+        <Border Name="borLine" BorderBrush="Black" BorderThickness="2" Height="140" Canvas.Left="50" Canvas.Top="60" Width="900"/>
+
+        <Label Name="lblsanpham" Height="40" Width="150" Canvas.Left="80" Canvas.Top="230" FontSize="17" Foreground="Red">Tên sản phẩm</Label>
+        <TextBox Name="txtSanPham" Height="30" Width="200" Canvas.Left="280" Canvas.Top="230" Background="LightCyan" FontSize="17" GotFocus="TxtSanPham_GotFocus" SelectionChanged="TxtSanPham_SelectionChanged"></TextBox>
+        <Label Name="lblNhacLenhSP" FontSize="13" Canvas.Left="280" Canvas.Top="260" Loaded="LblNhacLenhSP_Loaded">OPPO J3</Label>
+        <Label Name="lblsoluong" Height="40" Width="150" Canvas.Left="580" Canvas.Top="230" FontSize="17" Foreground="Red">Số lượng</Label>
+        <TextBox Name="txtSoLuong" Height="30" Width="40" Canvas.Left="700" Canvas.Top="230" Background="LightCyan" FontSize="17" HorizontalContentAlignment="Center">1</TextBox>
+
+        <Button Name="btnAdd" Height="50" Width="50" Canvas.Left="850" Canvas.Top="210" Click="BtnAdd_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/img_app/Add.png" Height="40" Width="40"></Image>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Label Name="lblTitle1" Height="40" Width="50" HorizontalContentAlignment="Center" 
+               Canvas.Top="295" Canvas.Left="100" FontSize="17" FontWeight="Bold">STT
+        </Label>
+        <Label Name="lblTitle2" Height="40" Width="200" HorizontalContentAlignment="Center" 
+               Canvas.Top="295" Canvas.Left="200" FontSize="17" FontWeight="Bold">Tên sản phẩm
+        </Label>
+        <Label Name="lblTitle3" Height="40" Width="100" HorizontalContentAlignment="Left" 
+               Canvas.Top="295" Canvas.Left="650" FontSize="17" FontWeight="Bold">Số lượng
+        </Label>
+        <Label Name="lblTitle4" Height="40" Width="100" HorizontalContentAlignment="Center" 
+               Canvas.Top="295" Canvas.Left="750" FontSize="17" FontWeight="Bold">Giá nhập
+        </Label>
+
+        <ListView Name="itemListView" Canvas.Left="60" Canvas.Top="340" Height="136" Width="890">
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel ScrollViewer.CanContentScroll="True"></StackPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Canvas Height="50" Width="850">
+                        <Label Name="txt1" Height="40" Width="50" HorizontalContentAlignment="Center" 
+                        Canvas.Top="10" Canvas.Left="30" FontSize="17" Content="{Binding STT}">
+                        </Label>
+                        <Label Name="txt2" Height="40" Width="300" HorizontalContentAlignment="Left" 
+                        Canvas.Top="10" Canvas.Left="150" FontSize="17" Content="{Binding TenSanPham}">
+                        </Label>
+                        <Label Name="txt3" Height="40" Width="200" HorizontalContentAlignment="Left" 
+                        Canvas.Top="10" Canvas.Left="600" FontSize="17" Content="{Binding SoLuong}">
+                        </Label>
+                        <Label Name="txt4" Height="40" Width="100" HorizontalContentAlignment="Left" 
+                        Canvas.Top="10" Canvas.Left="700" FontSize="17" Content="{Binding GiaNhap}">
+                        </Label>
+                    </Canvas>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Canvas.Top="480" Canvas.Left="700">Tổng tiền</Label>
+        <Label Name="lblTongtien" Canvas.Top="480" Canvas.Left="790" FontWeight="bold">0 VNĐ</Label>
+
+        <Button Canvas.Left="400" Canvas.Top="500" Height="30" Width="100" Click="ThanhToan_Click">_Nhập hàng</Button>
+    </Canvas>
+</Window>

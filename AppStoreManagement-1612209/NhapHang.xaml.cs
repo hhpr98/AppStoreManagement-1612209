@@ -15,58 +15,13 @@ using System.Windows.Shapes;
 namespace AppStoreManagement_1612209
 {
     /// <summary>
-    /// Interaction logic for BanHang.xaml
+    /// Interaction logic for NhapHang.xaml
     /// </summary>
-    public partial class BanHang : Window
+    public partial class NhapHang : Window
     {
-        public BanHang()
+        public NhapHang()
         {
             InitializeComponent();
-        }
-
-        private void Txt1_GotFocus(object sender, RoutedEventArgs e)
-        {
-            txt1.Text = "";
-        }
-
-        private void Txt1_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            if (txt1.Text!="")
-            {
-                if (txt1.Text.ToLower()==lblNhacLenhKH.Content.ToString().ToLower())
-                {
-                    lblNhacLenhKH.Content = "";
-                }
-                else
-                {
-                    bool flag = true;
-
-                    var db = new StoreManagementEntities();
-                    foreach (var index in db.KhachHangs)
-                    {
-                        if (index.TenKhachHang.ToLower().Contains(txt1.Text.ToLower()))
-                        {
-                            flag = false;
-                            lblNhacLenhKH.Content = index.TenKhachHang;
-                            break;
-                        }
-                    }
-
-                    if (flag)
-                    {
-                        lblNhacLenhKH.Content = "";
-                    }
-                }
-            }
-            else
-            {
-                lblNhacLenhKH.Content = "";
-            }
-        }
-
-        private void LblNhacLenhKH_Loaded(object sender, RoutedEventArgs e)
-        {
-            lblNhacLenhKH.Content = "";
         }
 
         private void LblNhacLenhSP_Loaded(object sender, RoutedEventArgs e)
@@ -114,20 +69,19 @@ namespace AppStoreManagement_1612209
             }
         }
 
-        class sanphamban
+        class sanphamnhap
         {
             public int STT { get; set; }
             public string MaSanPham { get; set; }
             public string TenSanPham { get; set; }
             public int SoLuong { get; set; }
-            public int GiaBan { get; set; }
+            public int GiaNhap { get; set; }
         }
 
-        List<sanphamban> items = new List<sanphamban>();
-        public string mahd;
+        List<sanphamnhap> items = new List<sanphamnhap>();
+        public string mapn;
         public string manv;
         public DateTime date;
-        public string makhachhang;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -137,38 +91,37 @@ namespace AppStoreManagement_1612209
             date = DateTime.Now;
             lbl41.Content = date.ToShortDateString();
 
-            // Tìm mã hóa đơn tiếp theo để thêm
+            // Tìm mã phiếu nhập tiếp theo để thêm
             var db = new StoreManagementEntities();
             var s = "";
-            foreach (var index in db.HoaDons)
+            foreach (var index in db.PhieuNhaps)
             {
-                s = index.MaHoaDon;
+                s = index.MaPhieuNhap;
             }
             int n = int.Parse(s.Substring(2, 3));
             n = n + 1;
             if (n < 10)
             {
-                s = "HD00" + n.ToString();
+                s = "PN00" + n.ToString();
             }
             else if (n < 100)
             {
-                s = "HD0" + n.ToString();
+                s = "PN0" + n.ToString();
             }
             else
             {
-                s = "HD" + n.ToString();
+                s = "PN" + n.ToString();
             }
 
-            mahd = s;
-            lbl11.Content = mahd;
+            mapn = s;
+            lbl11.Content = mapn;
         }
 
         int sothutu = 0;
         int tongtien = 0;
-        int diemthuong = 0;
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (txtSanPham.Text=="" || txtSoLuong.Text=="")
+            if (txtSanPham.Text == "" || txtSoLuong.Text == "")
             {
                 var btn = MessageBoxButton.OK;
                 var img = MessageBoxImage.Warning;
@@ -183,17 +136,15 @@ namespace AppStoreManagement_1612209
 
                 foreach (var index in db.SanPhams)
                 {
-                    if (index.TenSanPham.ToLower()==txtSanPham.Text.ToLower())
+                    if (index.TenSanPham.ToLower() == txtSanPham.Text.ToLower())
                     {
                         sothutu++;
                         flag = false;
-                        var item = new sanphamban() { STT = sothutu, MaSanPham = index.MaSanPham, TenSanPham = index.TenSanPham, SoLuong = int.Parse(txtSoLuong.Text), GiaBan = (int)index.GiaBan };
+                        var item = new sanphamnhap() { STT = sothutu, MaSanPham = index.MaSanPham, TenSanPham = index.TenSanPham, SoLuong = int.Parse(txtSoLuong.Text), GiaNhap = (int)index.GiaNhap };
                         items.Add(item);
                         tongtien += int.Parse(txtSoLuong.Text) * (int)index.GiaBan;
                         lblTongtien.Content = tongtien.ToString() + " VNĐ";
-                        diemthuong = tongtien / 100000;
-                        lblDiemthuong.Content = diemthuong.ToString() + " điểm";
-                        index.SoLuong -= int.Parse(txtSoLuong.Text); // đặt ở đây nghĩa là thêm vào rồi phải mua
+                        index.SoLuong += int.Parse(txtSoLuong.Text); // đặt ở đây nghĩa là thêm vào rồi phải nhập
                         break;
                     }
                 }
@@ -214,82 +165,61 @@ namespace AppStoreManagement_1612209
 
         private void ThanhToan_Click(object sender, RoutedEventArgs e)
         {
-            if (items.Count()==0)
+            if (items.Count() == 0)
             {
                 var btn = MessageBoxButton.OK;
                 var img = MessageBoxImage.Error;
-                var msg = "Chưa có sản phẩm nào trong giỏ hàng!";
+                var msg = "Chưa có sản phẩm nào trong phiếu nhập!";
                 MessageBox.Show(msg, "Thông báo", btn, img);
                 return;
             }
 
             var db = new StoreManagementEntities();
 
-            var makh = "";
-            // Tìm mã khách hàng
-            foreach (var index in db.KhachHangs)
-            {
-                if (index.TenKhachHang.ToLower()==txt1.Text.ToLower())
-                {
-                    makh = index.MaKhachHang;
-                    index.DiemTichLuy += diemthuong;
-                    break;
-                }
-            }
-
-            if (makh=="")
-            {
-                var btn = MessageBoxButton.OK;
-                var img = MessageBoxImage.Error;
-                var msg = "Không tìm thấy mã khách hàng";
-                MessageBox.Show(msg, "Thông báo", btn, img);
-                return;
-            }
-            db.SaveChanges(); // save điểm thưởng
+            // Tạo phiếu nhập
+            var phieunhapToAdd = new PhieuNhap() { MaPhieuNhap = mapn, MaNhanVien = manv, NgayNhap = date, TongTien = tongtien };
+            db.PhieuNhaps.Add(phieunhapToAdd);
+            db.SaveChanges(); // save phiếu nhập
 
 
-            // Tạo hóa đơn
-            var hoadonToAdd = new HoaDon() { MaHoaDon = mahd, MaKhachHang = makh, MaNhanVien = manv, NgayXuatHoaDon = date, TongTien = tongtien, DiemThuong = diemthuong };
-            db.HoaDons.Add(hoadonToAdd);
-            db.SaveChanges(); // save hóa đơn
-
-
-            // Tạo từng chi tiết hóa đơn
+            // Tạo từng chi tiết phiếu nhập
             foreach (var index in items)
             {
-                // Tìm chi tiết hóa đơn tiếp theo để thêm
+                // Tìm chi tiết phiếu nhập tiếp theo để thêm
                 var s = "";
-                foreach (var i in db.ChiTietHoaDons)
+                foreach (var i in db.ChiTietPhieuNhaps)
                 {
-                    s = i.MaChiTietHoaDon;
+                    s = i.MaChiTietPhieuNhap;
                 }
                 int n = int.Parse(s.Substring(2, 3));
                 n = n + 1;
                 if (n < 10)
                 {
-                    s = "CD00" + n.ToString();
+                    s = "CP00" + n.ToString();
                 }
                 else if (n < 100)
                 {
-                    s = "CD0" + n.ToString();
+                    s = "CP0" + n.ToString();
                 }
                 else
                 {
-                    s = "CD" + n.ToString();
+                    s = "CP" + n.ToString();
                 }
 
-                // Tạo chi tiết hóa đơn
-                var chitietToAdd = new ChiTietHoaDon() {MaChiTietHoaDon=s,MaHoaDon=mahd,MaSanPham=index.MaSanPham,SoLuong=index.SoLuong,GiaBan=index.GiaBan};
-                db.ChiTietHoaDons.Add(chitietToAdd);
-                db.SaveChanges();
+                // Tạo chi tiết phiếu nhập
+                var chitietToAdd = new ChiTietPhieuNhap() { MaChiTietPhieuNhap = s, MaPhieuNhap = mapn, MaSanPham = index.MaSanPham, SoLuong = index.SoLuong, GiaNhap = index.GiaNhap };
+                db.ChiTietPhieuNhaps.Add(chitietToAdd);
+                db.SaveChanges(); // save chi tiết phiếu nhập
 
             }
 
             var bt = MessageBoxButton.OK;
             var im = MessageBoxImage.Information;
-            var ms = "Thanh toán thành công!";
+            var ms = "Nhập hàng thành công!";
             MessageBox.Show(ms, "Thông báo", bt, im);
+
             this.Close();
         }
+
     }
 }

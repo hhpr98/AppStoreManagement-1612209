@@ -1,0 +1,30 @@
+﻿<Window x:Class="AppStoreManagement_1612209.XemPhieuNhap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Xem phiếu nhập hàng" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Label Name="lblTitle" Content="XEM PHIẾU NHẬP HÀNG" HorizontalContentAlignment="Center" Height="50"
+               Width="300" Canvas.Top="50" Canvas.Left="350" FontSize="23" FontWeight="Bold" Foreground="Blue">
+        </Label>
+
+        <Label Name="lblRes" Content="Vui lòng nhập mã phiếu nhập : " HorizontalContentAlignment="Center" Height="50"
+               Width="320" Canvas.Top="160" Canvas.Left="50" FontSize="23">
+        </Label>
+
+        <TextBox Name="txtInput" Height="40" Width="250" FontSize="23" Background="LightCyan" 
+                 BorderThickness="1" BorderBrush="Black" Canvas.Top="165" Canvas.Left="380" GotFocus="TxtInput_GotFocus">PN001
+        </TextBox>
+
+        <Button Name="btnOK" Click="BtnOK_Click" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="300" Canvas.Left="250">_Tìm
+        </Button>
+
+        <Button Name="btnCancel" Click="BtnCancel_Click" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="300" Canvas.Left="600">_Hủy bỏ
+        </Button>
+    </Canvas>
+</Window>
