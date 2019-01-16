@@ -389,5 +389,71 @@ namespace AppStoreManagement_1612209
             var windows = new ThongKe();
             windows.ShowDialog();
         }
+
+        private void CbMore_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var sel = cbMore.SelectedIndex;
+
+            if (sel==0)
+            {
+                if (MainWindow.tendangnhap == "admin")
+                {
+                    var windows = new ThemSanPham();
+                    windows.ShowDialog();
+                }
+                else
+                {
+                    var btn = MessageBoxButton.OK;
+                    var icon = MessageBoxImage.Error;
+                    var msg = "Lỗi : Chức năng chỉ dành cho admin";
+                    MessageBox.Show(msg, "Thông báo", btn, icon);
+                }
+                
+                cbMore.SelectedIndex = -1;
+            }
+
+            if (sel==1)
+            {
+
+                var windows = new DanhSachKhachHang();
+                windows.ShowDialog();
+                cbMore.SelectedIndex = -1;
+            }
+
+            if (sel==2)
+            {
+                if (MainWindow.tendangnhap == "admin")
+                {
+                    var windows = new DanhSachNhanVien();
+                    windows.ShowDialog();
+                }
+                else
+                {
+                    var btn = MessageBoxButton.OK;
+                    var icon = MessageBoxImage.Error;
+                    var msg = "Lỗi : Chức năng chỉ dành cho admin";
+                    MessageBox.Show(msg, "Thông báo", btn, icon);
+                }
+               
+                cbMore.SelectedIndex = -1;
+            }
+
+            if (sel == 3)
+            {
+                if (MainWindow.tendangnhap == "admin")
+                {
+                    var windows = new DanhSachTaiKhoan();
+                    windows.ShowDialog();
+                }
+                else
+                {
+                    var btn = MessageBoxButton.OK;
+                    var icon = MessageBoxImage.Error;
+                    var msg = "Lỗi : Chức năng chỉ dành cho admin";
+                    MessageBox.Show(msg, "Thông báo", btn, icon);
+                }
+                cbMore.SelectedIndex = -1;
+            }
+        }
     }
 }

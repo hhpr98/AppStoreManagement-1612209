@@ -12,7 +12,7 @@
                Width="400" Canvas.Top="20" Canvas.Left="300" FontSize="23" FontWeight="Bold" Foreground="Blue">
         </Label>
 
-        <ListView Name="itemListView" Height="400" Width="900" Canvas.Left="50" Canvas.Top="80" SelectionChanged="ItemListView_SelectionChanged">
+        <ListView Name="itemListView" Canvas.Left="75" Canvas.Top="75" SelectionChanged="ItemListView_SelectionChanged" ScrollViewer.CanContentScroll="True">
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -38,8 +38,27 @@
 
         </ListView>
 
-        <Button Name="btnReturn" Height="30" Width="100" Canvas.Left="450" Canvas.Top="510" HorizontalContentAlignment="Center" FontSize="17"
-                Click="BtnReturn_Click" Foreground="Red" Margin="0">_Thoát
+        <Button Name="btnPagePrev" Height="30" Width="100" Canvas.Left="250" Canvas.Top="500" Click="BtnPagePrev_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/img_app/pagePrev.png" Height="25" Width="25"></Image>
+                        <Label Content="Trang trước" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="blue"></Label>
+                    </StackPanel>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
+
+        <Button Name="btnPageNext" Height="30" Width="100" Canvas.Left="600" Canvas.Top="500" Click="BtnPageNext_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Trang sau" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="blue"></Label>
+                        <Image Source="/img_app/pageNext.png" Height="25" Width="25"></Image>
+                    </StackPanel>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
     </Canvas>
 </Window>

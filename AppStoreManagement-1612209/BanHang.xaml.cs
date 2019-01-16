@@ -226,13 +226,14 @@ namespace AppStoreManagement_1612209
             var db = new StoreManagementEntities();
 
             var makh = "";
+            var diemcuaKH = 0;
             // Tìm mã khách hàng
             foreach (var index in db.KhachHangs)
             {
                 if (index.TenKhachHang.ToLower()==txt1.Text.ToLower())
                 {
                     makh = index.MaKhachHang;
-                    index.DiemTichLuy += diemthuong;
+                    diemcuaKH = (int)index.DiemTichLuy;
                     break;
                 }
             }
@@ -244,6 +245,23 @@ namespace AppStoreManagement_1612209
                 var msg = "Không tìm thấy mã khách hàng";
                 MessageBox.Show(msg, "Thông báo", btn, img);
                 return;
+            }
+
+            var btn1 = MessageBoxButton.OKCancel;
+            var img1 = MessageBoxImage.Information;
+            var msg1 = "Khách hàng hiện đang có " + diemcuaKH.ToString() + " điểm, bạn có muốn trừ vào hóa đơn không?";
+            var res = MessageBox.Show(msg1, "Thông báo", btn1, img1,MessageBoxResult.Cancel);
+
+            if (res==MessageBoxResult.OK)
+            {
+                var find = db.KhachHangs.Find(makh);
+                tongtien -= diemcuaKH * 1000;
+                find.DiemTichLuy = diemthuong;
+            }
+            else
+            {
+                var find = db.KhachHangs.Find(makh);
+                find.DiemTichLuy += diemthuong;
             }
             db.SaveChanges(); // save điểm thưởng
 

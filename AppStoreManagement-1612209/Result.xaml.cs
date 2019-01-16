@@ -115,10 +115,15 @@ namespace AppStoreManagement_1612209
             this.Close();
         }
 
+        public int currentPage;
+        public int rowPerPage = 6;
+        List<SanPham> items = new List<SanPham>();
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var items = getItem();
-            itemListView.ItemsSource = items;
+            currentPage = 1;
+            items = getItem();
+            itemListView.ItemsSource = items.Take(6);
 
             if (items.Count() == 0)
             {
@@ -141,6 +146,35 @@ namespace AppStoreManagement_1612209
             {
                 var windows = new HienThiChiTietSanPham(item as SanPham);
                 windows.ShowDialog();
+            }
+        }
+
+        private void BtnPagePrev_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentPage == 1)
+            {
+                
+            }
+            else
+            {
+                currentPage--;
+                itemListView.ItemsSource = items.Skip((currentPage - 1) * rowPerPage).Take(6);
+            }
+        }
+
+        private void BtnPageNext_Click(object sender, RoutedEventArgs e)
+        {
+            if ((currentPage * 6) >= items.Count())
+            {
+                //MessageBoxButton button = MessageBoxButton.OK;
+                //MessageBoxImage icon = MessageBoxImage.Information;
+                //string content = "Trang cuối không thể tới được!";
+                //MessageBox.Show(content, "Thông báo", button, icon);
+            }
+            else
+            {
+                currentPage++;
+                itemListView.ItemsSource = items.Skip((currentPage - 1) * rowPerPage).Take(6);
             }
         }
     }

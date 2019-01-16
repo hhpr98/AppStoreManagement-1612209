@@ -94,6 +94,15 @@
     <Compile Include="DangKi.xaml.cs">
       <DependentUpon>DangKi.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachKhachHang.xaml.cs">
+      <DependentUpon>DanhSachKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachNhanVien.xaml.cs">
+      <DependentUpon>DanhSachNhanVien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachTaiKhoan.xaml.cs">
+      <DependentUpon>DanhSachTaiKhoan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HienThiChiTietSanPham.xaml.cs">
       <DependentUpon>HienThiChiTietSanPham.xaml</DependentUpon>
     </Compile>
@@ -141,6 +150,9 @@
     </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThemSanPham.xaml.cs">
+      <DependentUpon>ThemSanPham.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThongKe.xaml.cs">
       <DependentUpon>ThongKe.xaml</DependentUpon>
@@ -196,6 +208,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DanhSachKhachHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DanhSachNhanVien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DanhSachTaiKhoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -224,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Result.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThemSanPham.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -350,6 +378,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img_feature\chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\DanhSachKhachHang.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\DanhSachNhanVien.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\DanhSachTaiKhoan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img_feature\ThemSanPham.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="StoreModel.Context.tt">

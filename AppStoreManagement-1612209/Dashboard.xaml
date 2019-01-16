@@ -8,8 +8,8 @@
         Title="Dashboard" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="LightCyan">
     <Canvas>
 
-        <Label Canvas.Left="10" Canvas.Top="10">Xin chào, </Label>
-        <Label Name="lblWho" Canvas.Left="70" Canvas.Top="10" Foreground="Red" FontWeight="Bold">admin</Label>
+        <Label Canvas.Left="10" Canvas.Top="0">Xin chào, </Label>
+        <Label Name="lblWho" Canvas.Left="70" Canvas.Top="0" Foreground="Red" FontWeight="Bold">admin</Label>
 
         <Button Name="btnRefresh" Height="50" Width="80" Canvas.Left="0" Canvas.Top="30" Margin="0,10,0,-10" Click="BtnRefresh_Click">
             <Button.Template>
@@ -22,6 +22,33 @@
             </Button.Template>
         </Button>
 
+        <ComboBox Name="cbMore" Height="25" Width="150" Canvas.Left="100" Canvas.Top="50" SelectionChanged="CbMore_SelectionChanged">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/ThemSanPham.png" Height="20" Width="20" />
+                    <TextBlock>Thêm SP</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/DanhSachKhachHang.png" Height="20" Width="20" />
+                    <TextBlock>DS Khách hàng</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/DanhSachNhanVien.png" Height="20" Width="20" />
+                    <TextBlock>DS Nhân viên</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img_feature/DanhSachKhachHang.png" Height="20" Width="20" />
+                    <TextBlock>DS tài khoản</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+
         <Label Height="25" Width="50" Canvas.Left="300" Canvas.Top="50">Lọc</Label>
         <TextBox Name="txtFill" Width="200" Height="25" Canvas.Left="350" Canvas.Top="50" GotFocus="TxtFill_GotFocus" SelectionChanged="TxtFill_SelectionChanged"></TextBox>
         <ComboBox Name="cbFill" Height="25" Width="100" Canvas.Left="580" Canvas.Top="50" SelectionChanged="CbFill_SelectionChanged" Loaded="CbFill_Loaded"></ComboBox>
@@ -32,7 +59,7 @@
             <ComboBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/img_app/byAZ.png" Height="25" Width="25" />
-                    <TextBlock Name="tb1">Từ A -> Z</TextBlock>
+                    <TextBlock>Từ A -> Z</TextBlock>
                 </StackPanel>
             </ComboBoxItem>
             <ComboBoxItem>
@@ -87,7 +114,7 @@
             </Button.Template>
         </Button>
 
-        <Button Name="btnPageNext" Height="30" Width="100" Canvas.Left="600" Canvas.Top="500" Click="BtnPageNext_Click">
+        <Button Name="btnPageNext" Height="30" Width="100" Canvas.Left="680" Canvas.Top="500" Click="BtnPageNext_Click">
             <Button.Template>
                 <ControlTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -98,7 +125,7 @@
             </Button.Template>
         </Button>
 
-        <UniformGrid Columns="1" Rows="8" Width="80" Height="450" Canvas.Top="100" Canvas.Left="0" Background="White">
+        <UniformGrid Columns="1" Rows="8" Width="80" Height="460" Canvas.Top="100" Canvas.Left="0" Background="White">
             <Button Name="btnFind" Height="50" Width="80" Canvas.Left="0" Canvas.Top="0" Margin="0,10,0,-10" Click="BtnFind_Click">
                 <Button.Template>
                     <ControlTemplate>
@@ -186,6 +213,9 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+
+            
+
 
         </UniformGrid>
 

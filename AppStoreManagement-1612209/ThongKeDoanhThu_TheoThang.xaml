@@ -35,5 +35,13 @@
                 </DVC:ColumnSeries>
             </DVC:Chart.Series>
         </DVC:Chart>
+
+        <Label Canvas.Left="300" Canvas.Top="500">Tổng thu</Label>
+        <Label Canvas.Left="300" Canvas.Top="520">Tổng chi</Label>
+        <Label Canvas.Left="300" Canvas.Top="540">Nhận xét</Label>
+
+        <Label Name="lbl1" Canvas.Left="400" Canvas.Top="500" FontWeight="Bold">0 VNĐ</Label>
+        <Label Name="lbl2" Canvas.Left="400" Canvas.Top="520" FontWeight="Bold">0 VNĐ</Label>
+        <Label Name="lbl3" Canvas.Left="400" Canvas.Top="540" FontWeight="Bold">HÒA VỐN</Label>
     </Canvas>
 </Window>

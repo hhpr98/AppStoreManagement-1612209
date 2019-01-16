@@ -1,0 +1,43 @@
+﻿<Window x:Class="AppStoreManagement_1612209.ThemSanPham"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppStoreManagement_1612209"
+        mc:Ignorable="d"
+        Title="Thêm sản phẩm" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Label Name="lblTitle" Content="THÊM SẢN PHẨM" Height="40" Width="600" FontSize="23" FontWeight="Bold"
+               HorizontalContentAlignment="Center" Canvas.Left="200" Canvas.Top="0" Foreground="Blue">
+        </Label>
+
+        <Label Name="lbl1" Height="40" Width="150" Canvas.Left="80" Canvas.Top="55" FontSize="17">Tên sản phẩm</Label>
+        <Label Name="lbl2" Height="40" Width="150" Canvas.Left="80" Canvas.Top="105" FontSize="17">Xuất xứ</Label>
+        <Label Name="lbl3" Height="40" Width="150" Canvas.Left="80" Canvas.Top="155" FontSize="17">Giá gốc</Label>
+        <Label Name="lbl4" Height="40" Width="150" Canvas.Left="80" Canvas.Top="205" FontSize="17">Giá nhập</Label>
+        <Label Name="lbl5" Height="40" Width="150" Canvas.Left="80" Canvas.Top="255" FontSize="17">Giá bán</Label>
+        <Label Name="lbl6" Height="40" Width="150" Canvas.Left="80" Canvas.Top="305" FontSize="17">Loại sản phẩm</Label>
+        <Label Name="lbl7" Height="40" Width="150" Canvas.Left="80" Canvas.Top="355" FontSize="17">Hình ảnh</Label>
+        <Label Name="lbl8" Height="40" Width="150" Canvas.Left="80" Canvas.Top="405" FontSize="17">Số lượng</Label>
+        <Label Name="lbl9" Height="40" Width="150" Canvas.Left="80" Canvas.Top="455" FontSize="17">Mô tả</Label>
+        
+
+        <TextBox Name="txt1" Height="30" Width="500" Canvas.Left="230" Canvas.Top="55" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt2" Height="30" Width="500" Canvas.Left="230" Canvas.Top="105" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt3" Height="30" Width="500" Canvas.Left="230" Canvas.Top="155" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt4" Height="30" Width="500" Canvas.Left="230" Canvas.Top="205" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt5" Height="30" Width="500" Canvas.Left="230" Canvas.Top="255" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt6" Height="30" Width="500" Canvas.Left="230" Canvas.Top="305" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt7" Height="30" Width="500" Canvas.Left="230" Canvas.Top="355" Background="LightSkyBlue" FontSize="17">produce\default.jpg</TextBox>
+        <TextBox Name="txt8" Height="30" Width="500" Canvas.Left="230" Canvas.Top="405" Background="LightSkyBlue" FontSize="17"></TextBox>
+        <TextBox Name="txt9" Height="30" Width="500" Canvas.Left="230" Canvas.Top="455" Background="LightSkyBlue" FontSize="17">Không có mô tả</TextBox>
+
+        <Button Name="btnOK" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="500" Canvas.Left="300" Click="BtnOK_Click">_Thêm
+        </Button>
+
+        <Button Name="btnCancel" Height="40" Width="100" FontSize="23" Foreground="Red"
+                Canvas.Top="500" Canvas.Left="500" Click="BtnCancel_Click">_Hủy bỏ
+        </Button>
+    </Canvas>
+</Window>

@@ -41,6 +41,9 @@ namespace AppStoreManagement_1612209
                 MessageBox.Show(msg, "Thông báo", btn, img);
                 System.Collections.ArrayList data = new System.Collections.ArrayList();
                 chart.ItemsSource = data;
+                lbl1.Content = "0 VNĐ";
+                lbl2.Content = "0 VNĐ";
+                lbl3.Content = "HÒA VỐN";
             }
             else
             {
@@ -54,6 +57,9 @@ namespace AppStoreManagement_1612209
                     MessageBox.Show(msg, "Thông báo", btn, img);
                     System.Collections.ArrayList data1 = new System.Collections.ArrayList();
                     chart.ItemsSource = data1;
+                    lbl1.Content = "0 VNĐ";
+                    lbl2.Content = "0 VNĐ";
+                    lbl3.Content = "HÒA VỐN";
                     return;
                 }
 
@@ -100,6 +106,21 @@ namespace AppStoreManagement_1612209
                 }
 
                 chart.ItemsSource = data;
+
+                lbl1.Content = items[0].DoanhThu + " VNĐ";
+                lbl2.Content = items[1].DoanhThu + " VNĐ";
+                if (items[0].DoanhThu > items[1].DoanhThu)
+                {
+                    lbl3.Content = "LỜI";
+                }
+                else if (items[0].DoanhThu < items[1].DoanhThu)
+                {
+                    lbl3.Content = "LỖ";
+                }
+                else
+                {
+                    lbl3.Content = "HÒA VỐN";
+                }
             }
         }
     }
