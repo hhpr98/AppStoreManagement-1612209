@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\
+C:\git\AppStoreManagement-1612209\AppStoreManagement-1612209\obj\Debug\
 AppStoreManagement_1612209
 none
 false
 DEBUG;TRACE
-C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\App.xaml
+C:\git\AppStoreManagement-1612209\AppStoreManagement-1612209\App.xaml
 26-332310784
 2-769443541
-47-281020444
-22-224929432
+44738927668
+221044531854
 BanHang.xaml;ChinhSuaSanPham.xaml;DangKi.xaml;DanhSachKhachHang.xaml;DanhSachNhanVien.xaml;DanhSachTaiKhoan.xaml;Dashboard.xaml;HienThiChiTietSanPham.xaml;MainWindow.xaml;NhapHang.xaml;Result.xaml;ThemSanPham.xaml;ThongKe.xaml;ThongKeDoanhThu_TheoKhoangThoiGian.xaml;ThongKeDoanhThu_TheoNam.xaml;ThongKeDoanhThu_TheoNgay.xaml;ThongKeDoanhThu_TheoThang.xaml;ThongKeMaster_TheoKhoangThoiGian.xaml;ThongKeMaster_TheoNam.xaml;ThongKeMaster_TheoNgay.xaml;ThongKeMaster_TheoThang.xaml;TimKiem.xaml;XemHoaDon.xaml;XemHoaDonDetail.xaml;XemPhieuNhap.xaml;XemPhieuNhapDetail.xaml;
 
 False

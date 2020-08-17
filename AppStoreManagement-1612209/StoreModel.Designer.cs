@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Git\AppStoreManagement-1612209\AppStoreManagement-1612209\StoreModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\git\AppStoreManagement-1612209\AppStoreManagement-1612209\StoreModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
